@@ -1,0 +1,16 @@
+for backend 
+bcrypt cors express nodemon mongoose jsonwebtoken
+
+for frontend
+react-toastify axios react-icons react-router-dom
+
+
+
+When you're building a frontend (React, etc.) and backend (Node.js, Express, etc.) locally on different ports, like:
+
+Frontend: http://localhost:3000
+
+Backend: http://localhost:8000
+
+...your browser sees these as different origins. So, if your frontend tries to make a request to your backend, the browser blocks it by default unless the server explicitly allows it via CORS.
+
