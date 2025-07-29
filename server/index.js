@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors(
     {
-     origin: {"https://note-app-frontend-pi.vercel.app/"},
+     origin: {"https://note-app-frontend-pi.vercel.app"},
     
     }
 ));
