@@ -14,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (e) =>{
       e.preventDefault()
       try{
-        const response = await axios.post("http://localhost:3000/api/auth/login",{ email, password})
+        const response = await axios.post("note-app-api-six.vercel.app/login",{ email, password})
         console.log(response);
          if(response.data.success){
           login(response.data.user)
