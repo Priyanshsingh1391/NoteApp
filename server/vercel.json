@@ -1,35 +1,15 @@
-
 {
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
+      "src": "server/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-route",
-      "destination": "/new-route",
-      "permanent": true
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "server/index.js"
     }
   ]
 }
-
