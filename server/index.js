@@ -8,12 +8,7 @@ const connectToMongoDB = require('./db');
 
 const app = express();
 
-app.use(cors(
-    {
-     origin: {"https://note-app-frontend-pi.vercel.app"},
-    
-    }
-));
+app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRouter);
 app.use('/api/note', noteRouter )
